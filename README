@@ -1,0 +1,36 @@
+This is my set of C libraries for doing simple matrix operations and
+linear algebra (solving systems of linear equations, eigenvalues, and
+matrix inverses).
+
+Here are the basic operations that this library hopes to accomplish:
+
+- Matrix File IO
+    - Matrix Read (to read a matrix from a file)
+    - Matrix Copy (to duplicate an existing matrix)
+    - Matrix Make (to create an n-by-p matrix of Zeros)
+    - Matrix Free (to release memory)
+    - Matrix Write (to write to a file)
+    - Matrix Print (to display a matrix on the screen)
+- Simple Matrix Operations
+    - Identity Matrices
+    - Matrix Trace (Sum of elements along the diagonal)
+    - Matrix Transpose (To flip a matrix along the diagonal)
+    - Matrix Mean (returns the average of each column in a matrix)
+    - Matrix Multiplication
+    - Matrix Scaling
+    - Matrix Covariance
+    - Matrix Dot Product
+    - Matrix Dot Diagonal (computes the dot product of the diagonals of two matrices)
+- Advanced Matrix Operations
+    - Singular Value Decomposition
+    - Gram-Schmidt (For orthonormalising a set of vectors)
+    - The Power Method (For determining the largest eigenvalue of a large matrix)
+    - Francis QR Step
+    - Eigenvalues
+    - L2-norm distance measures (simiar to Matlab's pdist)
+    - LU Decomposition of a matrix
+    - Matrix Determinates
+    - Matrix Inverts
+    - Matrix Solver
+- Always nice to have:
+    - Quicksort (and who doesn't love quicksort)
