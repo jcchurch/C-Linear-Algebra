@@ -40,6 +40,8 @@ void gram_schmidt(matrix* a, matrix** q, matrix** r) {
             vPtr += v->width;
         }
         l2norm = sqrt(l2norm);
+        if(isnan(l2norm))
+          l2norm=0;
 
         // Store this value in R(k,k)
         // The nice thing about the rPtr variable is that
@@ -53,7 +55,10 @@ void gram_schmidt(matrix* a, matrix** q, matrix** r) {
         vPtr = v->data + k;
         qPtr = (*q)->data + k;
         for (i = 0; i < v->height; i++) {
-            *qPtr = *vPtr / l2norm;
+            if(l2norm==0)
+              *qPtr=0;
+            else
+              *qPtr = *vPtr / l2norm; 
             vPtr += v->width;
             qPtr += (*q)->width;
         }
